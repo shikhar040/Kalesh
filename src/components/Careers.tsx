@@ -41,11 +41,14 @@ const Careers = () => {
   ];
 
   return (
-    <section id="careers" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="careers" className="py-20 bg-white dark:bg-slate-900 relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-orange-500/15 rounded-full blur-3xl transform -translate-x-1/2"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Join Our <span className="text-orange-500">Team</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+            Join Our <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent neon-text">TEAM</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Be part of something extraordinary. We're looking for talented individuals to help shape
@@ -57,7 +60,7 @@ const Careers = () => {
           {openings.map((job, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-gray-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-x-2 border border-gray-200 dark:border-gray-700"
+              className="bg-gradient-to-br from-gray-50 to-orange-50 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-x-2 border border-gray-200 dark:border-orange-500/30 dark:glow-border group"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div className="flex-1">
@@ -79,7 +82,7 @@ const Careers = () => {
                     </div>
                   </div>
                 </div>
-                <button className="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 self-start md:self-center">
+                <button className="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold uppercase text-sm tracking-wide hover:shadow-xl transition-all duration-300 hover:scale-110 glow-effect self-start md:self-center">
                   <span>Apply Now</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -88,13 +91,13 @@ const Careers = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-12 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">Don't see the right position?</h3>
+        <div className="bg-gradient-to-r from-orange-500 via-orange-500 to-red-600 rounded-3xl p-12 text-center text-white glow-border">
+          <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">Don't see the right position?</h3>
           <p className="text-xl mb-8 opacity-90">
             We're always looking for exceptional talent. Send us your resume and we'll keep you in
             mind for future opportunities.
           </p>
-          <button className="bg-white text-orange-500 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <button className="bg-white text-transparent bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:shadow-xl transition-all duration-300 hover:scale-105">
             Send Your Resume
           </button>
         </div>

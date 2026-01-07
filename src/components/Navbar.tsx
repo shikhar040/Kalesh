@@ -29,16 +29,16 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg'
+          ? 'glass-effect dark:glass-effect shadow-2xl border-b border-orange-500/20'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3">
-            <img src="/kaleshlog.jpeg" alt="Kalesh Logo" className="h-12 w-12 rounded-lg" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
-              Kalesh
+            <img src="/kaleshlog.jpeg" alt="Kalesh Logo" className="h-12 w-12 rounded-lg glow-effect" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text text-transparent neon-text">
+              KALESH
             </span>
           </div>
 
@@ -47,9 +47,10 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-200 font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-orange-400 dark:hover:text-orange-300 transition-all duration-200 font-medium relative group"
               >
                 {link.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <button

@@ -2,11 +2,15 @@ import { Mail, MapPin, Phone, Send } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-orange-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-red-400/10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In <span className="text-orange-500">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+            Get In <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent neon-text">TOUCH</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Have questions? We'd love to hear from you. Send us a message and we'll respond as soon
@@ -16,9 +20,9 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 dark:glow-border group border border-gray-200 dark:border-orange-500/30">
               <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-orange-500 to-amber-500 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="bg-gradient-to-br from-orange-500 to-red-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:glow-effect transition-all">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -31,9 +35,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 dark:glow-border group border border-gray-200 dark:border-orange-500/30">
               <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-orange-500 to-amber-500 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="bg-gradient-to-br from-orange-500 to-red-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:glow-effect transition-all">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -46,9 +50,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 dark:glow-border group border border-gray-200 dark:border-orange-500/30">
               <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-orange-500 to-amber-500 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="bg-gradient-to-br from-orange-500 to-red-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:glow-effect transition-all">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -67,7 +71,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl">
+          <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl dark:glow-border border border-gray-200 dark:border-orange-500/30">
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
@@ -115,7 +119,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-500 via-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wide hover:shadow-2xl transition-all duration-300 hover:scale-105 glow-effect"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>

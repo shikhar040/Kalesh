@@ -62,12 +62,16 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="py-20 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800"
+      className="py-20 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 relative"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-orange-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-red-400/10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Powerful <span className="text-orange-500">Features</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+            Powerful <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent neon-text">FEATURES</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Everything you need for seamless communication, all in one place
@@ -80,9 +84,9 @@ const Features = () => {
             return (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-800"
+                className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4 border border-gray-200 dark:border-orange-500/30 dark:glow-border group"
               >
-                <div className="bg-gradient-to-br from-orange-500 to-amber-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                <div className="bg-gradient-to-br from-orange-500 to-red-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:glow-effect transition-all">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
